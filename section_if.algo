@@ -1,0 +1,45 @@
+Begin
+
+    char_count = 0
+    word_count = 0
+    vowel_count = 0
+    in_word = False
+
+    
+    Input sentence
+
+    For each character ch in sentence:
+        
+        char_count = char_count + 1
+
+        
+        If ch is 'a' or ch is 'e' or ch is 'i' or ch is 'o' or ch is 'u' or
+            ch is 'A' or ch is 'E' or ch is 'I' or ch is 'O' or ch is 'U' Then:
+            vowel_count = vowel_count + 1
+        End If
+
+        
+        If ch is ' ' Then:
+            If in_word is True Then:
+                word_count = word_count + 1
+                in_word = False
+            End If
+        Else If ch is a letter Then:
+            If in_word is False Then:
+                in_word = True
+            End If
+        End If
+    End For
+
+
+    If in_word is True Then:
+        word_count = word_count + 1
+    End If
+
+
+    Display "Number of characters: " + char_count
+    Display "Number of words: " + word_count
+    Display "Number of vowels: " + vowel_count
+
+End
+
